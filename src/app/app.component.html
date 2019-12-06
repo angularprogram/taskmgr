@@ -1,16 +1,18 @@
-<div class="site">
-  <header>
-    <app-header></app-header>
-  </header>
-  <main>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-  </main>
-  <footer>
-    <app-footer></app-footer>
-  </footer>
-</div>
+<md-sidenav-container>
+  <!-- mode="push" -->
+  <!-- align="start" -->
+  <md-sidenav #sidenav mode="over">
+    <app-sidebar></app-sidebar>
+  </md-sidenav>
+  <div class="site">
+    <header>
+      <app-header (toggle)="sidenav.toggle()"></app-header>
+    </header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+    <footer>
+      <app-footer></app-footer>
+    </footer>
+  </div>
+</md-sidenav-container>
