@@ -8,6 +8,7 @@ const routes: Routes = [
     // { path: '', loadChildren: './login/login.module#LoginModule' },
     { path: 'project', redirectTo: '/project', pathMatch: 'full' },
     // { path: 'project', loadChildren: './project/project.module#ProjectModule' }
+    { path: 'tasklists', redirectTo: '/tasklists', pathMatch: 'full' }
 ];
 
 @NgModule({
