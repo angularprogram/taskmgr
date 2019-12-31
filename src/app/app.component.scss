@@ -11,3 +11,10 @@ md-sidenav {
     height: 100px;
     background-color: black;
 }
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
