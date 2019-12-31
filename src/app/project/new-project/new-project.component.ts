@@ -8,6 +8,8 @@ import { MD_DIALOG_DATA, MdDialogRef } from '@angular/material';
 })
 export class NewProjectComponent implements OnInit {
 
+  title = '';
+
   constructor(
     @Inject(MD_DIALOG_DATA) private data,
     private dialogRef: MdDialogRef<NewProjectComponent>
@@ -15,7 +17,8 @@ export class NewProjectComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.info(this.data.dark);
+    this.title = this.data.title;
+    // console.info(this.data.dark);
     // this.oc.themeClass = this.data.dark ? 'myapp-dark-theme' : null;
   }
 
